@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLOWEL — Curated Beauty Boutique | Lips, Fragrance, Skincare & Body</title>
+<meta name="description" content="GLOWEL — a curated beauty boutique. Lip care, makeup, perfumes, body care, skincare and sun care. Order personally via WhatsApp.">
+<link rel="icon" href="https://i.imgur.com/Neocmhz.jpeg">
+<meta name="theme-color" content="#FFFAF5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>
+/* Image fallback (defined early so every image can use it) */
+window.FB="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23F7E6D9'/%3E%3Ccircle cx='200' cy='205' r='72' fill='%23EFD3C2'/%3E%3Ctext x='200' y='330' text-anchor='middle' font-family='Georgia,serif' font-size='38' letter-spacing='8' fill='%23B07D64'%3EGLOWEL%3C/text%3E%3C/svg%3E";
+window.__fb=function(el){el.onerror=null;el.src=window.FB;};
+</script>
+<style>
+:root{
+  --cream:#FFFAF5; --ivory:#FFF6EE; --paper:#FFFDFA;
+  --blush:#FBEAE1; --powder:#F6DFD3; --sand:#EFD7C8;
+  --rose:#E7BBA9; --rose2:#D89F8C; --clay:#C0806C;
+  --wine:#A65A4A; --wine2:#8E4A3C;
+  --ink:#4C3A31; --ink2:#7C675B; --line:#EADBD0;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Jost","Segoe UI",sans-serif;
+  --shadow:0 26px 48px -30px rgba(140,90,70,.32);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+a{color:inherit}
+::selection{background:var(--rose);color:var(--ink)}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--cream);padding:10px 18px;z-index:200;border-radius:0 0 10px 0}
+.skip:focus{left:0}
+.container{width:min(1240px,92%);margin:0 auto}
+section[id],footer[id]{scroll-margin-top:104px}
+.section{padding:96px 0}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--wine)}
+.h2{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,4vw,3.2rem);line-height:1.08;color:var(--ink);margin:12px 0 14px}
+.h2 em{font-style:italic;color:var(--clay)}
+.h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;color:var(--ink)}
+.lead{color:var(--ink2);font-size:15.5px;max-width:560px}
+.center{text-align:center}.center .lead{margin:0 auto}
+/* ---------- reveal ---------- */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.6,.2,1)}
+.rev.on{opacity:1;transform:none}
+/* ---------- announcement + header ---------- */
+.annc{background:var(--wine2);color:#FFEFDF;text-align:center;font-size:12px;letter-spacing:.1em;padding:9px 14px}
+.annc a{color:#fff;font-weight:500;text-underline-offset:3px}
+header{position:sticky;top:0;z-index:60;background:rgba(255,250,245,.94);backdrop-filter:blur(9px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 12px 30px -22px rgba(76,58,49,.35)}
+.hwrap{display:flex;align-items:center;gap:26px;height:74px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:var(--blush)}
+.brand span{font-family:var(--serif);font-weight:700;font-size:23px;letter-spacing:.2em;color:var(--ink)}
+.mainnav{display:flex;gap:24px;margin-left:auto}
+.mainnav a{font-size:11.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink2);text-decoration:none;position:relative;padding:6px 0;white-space:nowrap}
+.mainnav a::after{content:"";position:absolute;left:0;bottom:2px;height:1.5px;width:100%;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.mainnav a:hover{color:var(--ink)}.mainnav a:hover::after{transform:scaleX(1)}
+.hactions{display:flex;gap:10px;margin-left:auto}
+.mainnav~.hactions{margin-left:0}
+.iconbtn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:.25s}
+.iconbtn:hover{background:var(--blush)}
+.iconbtn svg{width:19px;height:19px}
+.burger{display:none}
+.badge{position:absolute;top:-4px;right:-5px;min-width:19px;height:19px;padding:0 4px;border-radius:999px;background:var(--wine);color:#fff;font-size:10px;font-weight:600;display:none;align-items:center;justify-content:center}
+.badge.show{display:flex}
+.badge.pop{animation:pop .35s ease}
+@keyframes pop{50%{transform:scale(1.35)}}
+/* ---------- mobile nav ---------- */
+.mnav{position:fixed;inset:0;z-index:90;background:var(--ivory);padding:86px 30px 44px;display:flex;flex-direction:column;gap:4px;transform:translateY(-103%);visibility:hidden;transition:transform .5s cubic-bezier(.3,.7,.2,1),visibility .5s;overflow:auto}
+.mnav.open{transform:none;visibility:visible}
+.mnav a,.mnav button.mlink{font-family:var(--serif);font-size:29px;font-weight:600;color:var(--ink);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line);text-align:left;background:none;border-left:0;border-right:0;border-top:0;width:100%}
+.mnav .btn{margin-top:26px}
+.mnav-close{position:absolute;top:18px;right:20px}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:calc(100vh - 46px);min-height:calc(100svh - 46px);display:flex;align-items:center;padding:70px 0 100px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.wm{position:absolute;right:-6vw;top:-10rem;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(18rem,36vw,32rem);line-height:.9;color:var(--powder);opacity:.55;user-select:none}
+.blob{position:absolute;border-radius:50%;filter:blur(46px);opacity:.85}
+.b1{width:520px;height:520px;left:-160px;top:-140px;background:radial-gradient(closest-side,var(--powder),transparent)}
+.b2{width:460px;height:460px;right:-120px;bottom:-160px;background:radial-gradient(closest-side,var(--blush),transparent)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+.hero-title{font-family:var(--serif);font-weight:600;font-size:clamp(3rem,6.6vw,5.6rem);line-height:1.02;margin:18px 0 20px;color:var(--ink)}
+.hero-title em{font-style:italic;color:var(--clay)}
+.hero-sub{color:var(--ink2);font-size:16.5px;max-width:480px;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 32px;border-radius:999px;border:1px solid transparent;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:.3s}
+.btn.solid{background:var(--ink);color:#FFEFDF}
+.btn.solid:hover{background:var(--wine2)}
+.btn.ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn.ghost:hover{background:var(--ink);color:#FFEFDF}
+.btn.wa{background:var(--wine);color:#fff}
+.btn.wa:hover{background:var(--wine2)}
+.btn svg{width:17px;height:17px}
+.hero-facts{margin-top:34px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.hero-facts b{color:var(--wine);font-weight:600}
+.hero-stage{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center}
+.arch{width:min(400px,84%);border-radius:999px 999px 22px 22px;overflow:hidden;border:8px solid var(--paper);box-shadow:var(--shadow);background:var(--blush)}
+.arch img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.fchip{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:9px 9px 10px;width:158px;box-shadow:var(--shadow);text-align:left;transition:transform .3s;z-index:2;animation:float 7s ease-in-out infinite alternate}
+.fchip:hover{transform:scale(1.04) rotate(0deg)!important}
+.fchip img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:11px;background:var(--blush)}
+.fchip span{display:flex;justify-content:space-between;gap:6px;align-items:baseline;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-top:8px;line-height:1.3}
+.fchip b{color:var(--wine);font-size:11px;letter-spacing:0}
+.f1{top:3%;left:-2%;transform:rotate(-5deg)}
+.f2{bottom:5%;right:-1%;transform:rotate(4deg);animation-delay:1.4s}
+@keyframes float{to{translate:0 -12px}}
+.scrollcue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink2);text-decoration:none;z-index:2}
+.scrollcue i{width:1px;height:46px;background:linear-gradient(var(--wine),transparent);animation:drop 2.2s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(.2);transform-origin:top}50%{transform:scaleY(1)}100%{transform:scaleY(.2);transform-origin:bottom}}
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:#F3E2D6;overflow:hidden;padding:15px 0}
+.mtrack{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite}
+.mtrack span{font-family:var(--serif);font-style:italic;font-size:19px;letter-spacing:.08em;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ---------- collections ---------- */
+.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.tile{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;border:0;padding:0;background:var(--powder);text-align:left}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.6,.2,1)}
+.tile:hover img{transform:scale(1.07)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(76,58,49,0) 42%,rgba(76,58,49,.66))}
+.tile-info{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;color:#FFEFDF}
+.tile-info small{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand);margin-bottom:6px}
+.tile-info h3{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.1}
+.tile-info .go{display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#FFEFDF;opacity:.9}
+.tile-info .go svg{width:15px;height:15px;transition:transform .3s}
+.tile:hover .go svg{transform:translateX(6px)}
+/* ---------- best sellers ---------- */
+#bestsellers{background:var(--ivory)}
+.best-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:24px 20px;margin-top:44px}
+/* ---------- promo ---------- */
+#promo{background:var(--blush)}
+.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.promo-media{border-radius:22px;overflow:hidden;border:8px solid var(--paper);box-shadow:var(--shadow);background:var(--powder)}
+.promo-media img{aspect-ratio:4/3.4;object-fit:cover;width:100%}
+.promo-copy .btn{margin-top:26px}
+.promo-note{margin-top:16px;font-size:12.5px;color:var(--ink2);font-style:italic;font-family:var(--serif);font-size:15px}
+/* ---------- shop ---------- */
+.toolbar{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:36px}
+.search{position:relative;flex:1 1 320px;max-width:480px}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--ink2)}
+.search input{width:100%;padding:13px 20px 13px 43px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-family:var(--sans);font-size:15px;color:var(--ink);transition:border-color .3s}
+.search input::placeholder{color:var(--ink2)}
+.search input:focus{outline:none;border-color:var(--wine)}
+.sortwrap{display:flex;align-items:center;gap:10px;margin-left:auto}
+.sortwrap>span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.sortwrap select{appearance:none;-webkit-appearance:none;padding:12px 38px 12px 18px;border-radius:999px;border:1px solid var(--line);background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237C675B' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 16px center;font-family:var(--sans);font-size:14px;color:var(--ink);cursor:pointer}
+.pills{display:flex;gap:9px;overflow-x:auto;padding:18px 2px 8px;scrollbar-width:thin}
+.pill{flex:0 0 auto;padding:9px 17px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:12px;font-weight:500;letter-spacing:.05em;color:var(--ink2);transition:.25s}
+.pill:hover{border-color:var(--wine);color:var(--wine)}
+.pill.on{background:var(--ink);border-color:var(--ink);color:#FFEFDF}
+.count{margin:10px 0 22px;font-size:12.5px;letter-spacing:.06em;color:var(--ink2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:26px 20px}
+.empty{text-align:center;padding:40px 0 20px}
+.empty .btn{margin-top:20px}
+/* ---------- product card ---------- */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.card:hover{transform:translateY(-5px);border-color:var(--rose);box-shadow:var(--shadow)}
+.card-media{position:relative;aspect-ratio:4/5;background:var(--blush);overflow:hidden}
+.card-media .zoom{position:absolute;inset:0;border:0;background:none;padding:0;cursor:zoom-in}
+.gimg{width:100%;height:100%;object-fit:cover;transition:transform .8s ease,opacity .3s ease}
+.card:hover .gimg{transform:scale(1.06)}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:33px;height:33px;border-radius:50%;border:1px solid var(--line);background:rgba(255,253,250,.94);color:var(--ink);display:flex;align-items:center;justify-content:center;opacity:0;transition:.25s;padding:0}
+.gnav svg{width:15px;height:15px}
+.gnav.prev{left:8px}.gnav.next{right:8px}
+.card:hover .gnav,.gnav:focus-visible{opacity:1}
+.gnav:hover{background:var(--ink);color:#FFEFDF;border-color:var(--ink)}
+@media (hover:none){.gnav{opacity:1}}
+.gmeta{position:absolute;left:0;right:0;bottom:10px;z-index:3;display:flex;align-items:center;justify-content:center;gap:10px}
+.gdots{display:flex;gap:2px}
+.gdot{width:18px;height:18px;background:none;border:0;position:relative;padding:0}
+.gdot::after{content:"";position:absolute;inset:5.5px;border-radius:50%;background:var(--sand);transition:.2s;box-shadow:0 0 0 1px rgba(255,255,255,.6)}
+.gdot.on::after{background:var(--wine)}
+.gcount{background:rgba(255,253,250,.92);border:1px solid var(--line);padding:3px 10px;border-radius:999px;font-size:10.5px;letter-spacing:.08em;color:var(--ink2)}
+.card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-cat{font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--wine)}
+.card-name{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.15;color:var(--ink)}
+.card-note{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink2);margin-top:-6px}
+.mlabel{display:block;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.chips,.packs{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:11.5px;font-weight:500;letter-spacing:.03em;color:var(--ink2);transition:.2s}
+.chip:hover{border-color:var(--clay);color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#FFEFDF}
+.pk{padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:11.5px;font-weight:500;color:var(--ink2);transition:.2s}
+.pk:hover{border-color:var(--wine)}
+.pk.on{background:var(--wine);border-color:var(--wine);color:#fff}
+.card-foot{margin-top:auto;padding-top:13px;border-top:1px solid var(--line);display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.price strong{font-size:17.5px;font-weight:600;color:var(--ink)}
+.pper{display:block;font-size:10.5px;letter-spacing:.04em;color:var(--ink2)}
+.cactions{display:flex;gap:8px;align-items:center}
+.add{padding:11px 16px;border-radius:999px;border:0;background:var(--ink);color:#FFEFDF;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:.25s;white-space:nowrap}
+.add:hover{background:var(--wine2)}
+.wab{width:40px;height:40px;border-radius:50%;border:1px solid var(--wine);background:transparent;color:var(--wine);display:flex;align-items:center;justify-content:center;transition:.25s;flex:0 0 auto}
+.wab svg{width:19px;height:19px}
+.wab:hover{background:var(--wine);color:#fff}
+/* ---------- about ---------- */
+#about{background:var(--ivory);text-align:center}
+.medal{width:104px;height:104px;border-radius:50%;object-fit:cover;border:7px solid var(--paper);box-shadow:var(--shadow);margin:0 auto 22px;background:var(--blush)}
+#about .lead{margin:0 auto 30px}
+.contact-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
+.tel{font-size:14px;letter-spacing:.08em;color:var(--ink2)}
+/* ---------- footer ---------- */
+footer{background:#46362D;color:#EFD7C8;padding:74px 0 26px}
+.fgrid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:44px}
+.fbrand{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.fbrand img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1px solid rgba(239,215,200,.3)}
+.fbrand span{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:.2em;color:#FFEFDF}
+.fbrand p{font-size:13.5px;color:rgba(239,215,200,.75);max-width:300px}
+.fh{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--rose2);margin-bottom:16px}
+.flinks{display:flex;flex-direction:column;gap:9px;align-items:flex-start}
+.flinks button{background:none;border:0;padding:0;font-size:13.5px;color:rgba(255,239,223,.8);transition:.2s;text-align:left}
+.flinks button:hover{color:#fff;translate:3px 0}
+.fwa{display:inline-flex;align-items:center;gap:10px;margin-top:6px;padding:13px 22px;border-radius:999px;border:1px solid rgba(239,215,200,.4);background:transparent;color:#FFEFDF;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:.3s}
+.fwa:hover{background:#FFEFDF;color:#46362D}
+.fwa svg{width:17px;height:17px}
+.fnum{margin-top:14px;font-size:13.5px;letter-spacing:.06em;color:rgba(255,239,223,.85)}
+.fbot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(239,215,200,.18);margin-top:52px;padding-top:22px;font-size:12px;color:rgba(239,215,200,.55);letter-spacing:.06em}
+/* ---------- cart ---------- */
+.scrim{position:fixed;inset:0;background:rgba(76,58,49,.45);opacity:0;pointer-events:none;transition:.35s;z-index:70}
+.scrim.show{opacity:1;pointer-events:auto}
+.cart{position:fixed;top:0;right:0;bottom:0;width:min(432px,94vw);background:var(--ivory);z-index:80;display:flex;flex-direction:column;transform:translateX(105%);visibility:hidden;transition:transform .5s cubic-bezier(.3,.7,.2,1),visibility .5s;box-shadow:-30px 0 70px rgba(76,58,49,.2)}
+.cart.open{transform:none;visibility:visible}
+.cart-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line)}
+.cart-head h3{font-family:var(--serif);font-weight:600;font-size:25px}
+.cart-head span{color:var(--wine);font-size:16px}
+.cart-items{flex:1;overflow-y:auto;padding:8px 22px}
+.ci{display:flex;gap:13px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.ci>img{width:66px;height:78px;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:var(--blush);flex:0 0 auto}
+.ci-info{flex:1;min-width:0}
+.ci-name{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.2}
+.ci-meta{font-size:11.5px;color:var(--ink2);margin-top:2px}
+.ci-qty{display:flex;align-items:center;gap:8px;margin-top:9px}
+.ci-qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:15px;line-height:1;color:var(--ink);display:flex;align-items:center;justify-content:center;padding:0}
+.ci-qty button:hover{border-color:var(--wine);color:var(--wine)}
+.ci-qty span{min-width:22px;text-align:center;font-size:13.5px;font-weight:600}
+.ci-rm{margin-left:8px;background:none;border:0;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);text-decoration:underline;text-underline-offset:3px;padding:0}
+.ci-line{margin-left:auto;font-weight:600;font-size:14.5px;white-space:nowrap}
+.cart-empty{text-align:center;padding:70px 12px}
+.cart-empty .lead{margin:10px auto 24px}
+.cart-foot{background:var(--paper);border-top:1px solid var(--line);padding:18px 22px 20px}
+.cart-total{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.cart-total strong{font-size:22px;letter-spacing:0;color:var(--ink)}
+.cart-foot .btn{width:100%;margin:15px 0 10px}
+.cart-note{font-size:11px;color:var(--ink2);line-height:1.55}
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:.3s}
+.lb.open{visibility:visible;opacity:1}
+.lb-back{position:absolute;inset:0;background:rgba(52,38,30,.8)}
+.lb-stage{position:relative;z-index:1;text-align:center;padding:0 16px}
+.lb-stage img{max-width:min(740px,88vw);max-height:72vh;border-radius:14px;border:8px solid var(--paper);background:var(--paper);box-shadow:0 40px 80px -30px rgba(0,0,0,.5);margin:0 auto;display:block}
+#lbCap{margin-top:15px;font-family:var(--serif);font-weight:600;font-size:21px;color:#FFEFDF}
+#lbCount{margin-top:3px;font-size:12px;letter-spacing:.14em;color:rgba(255,239,223,.75)}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:47px;height:47px;border-radius:50%;border:0;background:rgba(255,246,238,.94);color:var(--ink);display:flex;align-items:center;justify-content:center;transition:.25s;padding:0}
+.lb-btn svg{width:19px;height:19px}
+.lb-btn:hover{background:#fff}
+.lb-btn.prev{left:16px}.lb-btn.next{right:16px}
+.lb-close{position:absolute;top:18px;right:18px;z-index:2;background:transparent;border-color:rgba(255,239,223,.5);color:#FFEFDF}
+.lb-close:hover{background:rgba(255,239,223,.15)}
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,16px);background:var(--ink);color:#FFEFDF;padding:13px 24px;border-radius:999px;font-size:13.5px;letter-spacing:.04em;opacity:0;pointer-events:none;transition:.35s;z-index:120;box-shadow:var(--shadow)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .mainnav{display:none}
+  .burger{display:flex}
+}
+@media (max-width:980px){
+  .hero{padding:48px 0 90px}
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .hero-stage{min-height:480px;margin-top:8px}
+  .tile-grid{grid-template-columns:repeat(2,1fr)}
+  .promo-grid{grid-template-columns:1fr;gap:40px}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .section{padding:78px 0}
+}
+@media (max-width:620px){
+  .section{padding:62px 0}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(166px,1fr));gap:16px 12px}
+  .card-body{padding:12px 12px 14px;gap:8px}
+  .card-name{font-size:16.5px}
+  .add{padding:10px 11px;font-size:9.5px;letter-spacing:.08em}
+  .wab{width:36px;height:36px}
+  .chips,.packs{gap:5px}
+  .chip,.pk{padding:5px 9px;font-size:10.5px}
+  .tile-grid{grid-template-columns:1fr}
+  .tile{aspect-ratio:1/1}
+  .fgrid{grid-template-columns:1fr;gap:34px}
+  .scrollcue{display:none}
+  .f1{width:118px;left:-4px}.f2{width:126px;right:-4px}
+  .hero-stage{min-height:400px}
+  .sortwrap{margin-left:0}
+  .h2{font-size:1.9rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rev{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#shop">Skip to shop</a>
+
+<div class="annc">Order directly on WhatsApp · <a href="https://wa.me/96178792114" target="_blank" rel="noopener">+961 78 792 114</a></div>
+
+<header id="hdr">
+  <div class="container hwrap">
+    <a class="brand" href="#home">
+      <img src="https://i.imgur.com/Neocmhz.jpeg" alt="GLOWEL logo" width="38" height="38" onerror="__fb(this)">
+      <span>GLOWEL</span>
+    </a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#shop" data-cat-link="All">Shop All</a>
+      <a href="#shop" data-cat-link="Makeup">Makeup</a>
+      <a href="#shop" data-cat-link="Lip Care &amp; Lip Makeup">Lip Collection</a>
+      <a href="#shop" data-cat-link="Perfumes &amp; Fragrance">Perfumes</a>
+      <a href="#shop" data-cat-link="Body Care">Body Care</a>
+      <a href="#shop" data-cat-link="Skin &amp; Sun">Skincare</a>
+      <a href="#shop" data-cat-link="Makeup Tools &amp; Accessories">Accessories</a>
+    </nav>
+    <div class="hactions">
+      <button class="iconbtn" id="searchBtn" aria-label="Search products">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+      </button>
+      <button class="iconbtn bagbtn" id="bagBtn" aria-label="Open shopping bag" style="position:relative">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6.4 8.5h11.2L16.4 20H7.6L6.4 8.5z"/><path d="M9.2 8.5V7a2.8 2.8 0 0 1 5.6 0v1.5"/></svg>
+        <span class="badge" id="bagCount">0</span>
+      </button>
+      <button class="iconbtn burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" aria-label="Mobile menu">
+  <button class="iconbtn mnav-close" id="mnavClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="#home" data-mlink>Home</a>
+  <button class="mlink" data-cat-link="All" data-mlink>Shop All</button>
+  <button class="mlink" data-cat-link="Makeup" data-mlink>Makeup</button>
+  <button class="mlink" data-cat-link="Lip Care &amp; Lip Makeup" data-mlink>Lip Collection</button>
+  <button class="mlink" data-cat-link="Perfumes &amp; Fragrance" data-mlink>Perfumes</button>
+  <button class="mlink" data-cat-link="Body Care" data-mlink>Body Care</button>
+  <button class="mlink" data-cat-link="Skin &amp; Sun" data-mlink>Skincare</button>
+  <button class="mlink" data-cat-link="Makeup Tools &amp; Accessories" data-mlink>Accessories</button>
+  <a class="btn wa" href="https://wa.me/96178792114" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a11.6 11.6 0 0 1-7.985-3.105C2.67 15.963 2.02 13.65 2.02 11.305c0-5.467 4.45-9.91 9.918-9.91 2.652 0 5.144 1.033 7.014 2.904a9.85 9.85 0 0 1 2.903 7.012c0 5.468-4.45 9.912-9.917 9.912m8.46-18.373A11.83 11.83 0 0 0 11.937 0C5.353 0 .03 5.323.03 11.907c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.574 0 11.908-5.323 11.908-11.907 0-3.186-1.24-6.186-3.495-8.44"/></svg>
+    WhatsApp Us
+  </a>
+</nav>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"><span class="wm">G</span><i class="blob b1"></i><i class="blob b2"></i></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow rev">Glowel · Curated Beauty Boutique</p>
+      <h1 class="hero-title rev d1" style="transition-delay:.08s">The new ritual<br>of <em>glow.</em></h1>
+      <p class="hero-sub rev" style="transition-delay:.16s">Lip couture, fragrance, skincare and body essentials — an edited collection of <b id="cntHero">157</b> pieces, ordered personally over WhatsApp.</p>
+      <div class="hero-cta rev" style="transition-delay:.24s">
+        <a class="btn solid" href="#shop">Shop Now</a>
+        <a class="btn ghost" href="#collections">Explore Collections</a>
+      </div>
+      <p class="hero-facts rev" style="transition-delay:.32s"><b><span class="js-count">157</span> Pieces</b> · 9 Categories · WhatsApp Ordering</p>
+    </div>
+    <div class="hero-stage rev" style="transition-delay:.2s">
+      <figure class="arch">
+        <img src="https://i.imgur.com/a6tKlaQ.jpeg" alt="Victoria’s Secret fragrance from the GLOWEL collection" width="800" height="1066" fetchpriority="high" onerror="__fb(this)">
+      </figure>
+      <button class="fchip f1" data-q="SHEGLAM LIP PLUMPER" aria-label="Shop SHEGLAM LIP PLUMPER">
+        <img src="https://i.imgur.com/F7MblUc.jpeg" alt="SHEGLAM LIP PLUMPER" width="300" height="300" onerror="__fb(this)">
+        <span>SHEGLAM Lip Plumper<b>$2.00</b></span>
+      </button>
+      <button class="fchip f2" data-q="Gloss rhode" aria-label="Shop Gloss rhode">
+        <img src="https://i.imgur.com/ZA8It9P.jpeg" alt="Gloss rhode" width="300" height="300" onerror="__fb(this)">
+        <span>Gloss Rhode<b>$2.00</b></span>
+      </button>
+    </div>
+  </div>
+  <a class="scrollcue" href="#collections" aria-label="Scroll to collections"><i></i>Scroll</a>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="mtrack">
+    <span>GLOWEL</span><span>·</span><span>Lip Couture</span><span>·</span><span>Fragrance</span><span>·</span><span>Skincare</span><span>·</span><span>Body Care</span><span>·</span><span>Sun Care</span><span>·</span><span>Beauty Tools</span><span>·</span><span>GLOWEL</span><span>·</span><span>Lip Couture</span><span>·</span><span>Fragrance</span><span>·</span><span>Skincare</span><span>·</span><span>Body Care</span><span>·</span><span>Sun Care</span><span>·</span><span>Beauty Tools</span><span>·</span>
+  </div>
+</div>
+
+<!-- ============ COLLECTIONS ============ -->
+<section class="section" id="collections">
+  <div class="container center">
+    <div class="rev">
+      <p class="eyebrow">Collections</p>
+      <h2 class="h2">Choose your <em>ritual.</em></h2>
+      <p class="lead">Six edits, one boutique — each category shoppable in a single tap.</p>
+    </div>
+    <div class="tile-grid">
+      <button class="tile rev" data-cat-link="Lip Care &amp; Lip Makeup"><img src="https://i.imgur.com/Td5LBfN.jpeg" alt="Lip oils and glosses" loading="lazy" onerror="__fb(this)"><span class="tile-info"><small>01 — Lips</small><h3>Lip Couture</h3><span class="go">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+      <button class="tile rev" data-cat-link="Face Makeup" style="transition-delay:.06s"><img src="https://i.imgur.com/Y2VIDNG.jpeg" alt="Blush and complexion makeup" loading="lazy" onerror="__fb(this)"><span class="tile-info"><small>02 — Face</small><h3>Complexion</h3><span class="go">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+      <button class="tile rev" data-cat-link="Eye Makeup" style="transition-delay:.12s"><img src="https://i.imgur.com/9q179dm.jpeg" alt="Eyeshadow palettes and mascara" loading="lazy" onerror="__fb(this)"><span class="tile-info"><small>03 — Eyes</small><h3>The Gaze</h3><span class="go">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+      <button class="tile rev" data-cat-link="Perfumes &amp; Fragrance"><img src="https://i.imgur.com/H6cpKxW.jpeg" alt="Perfume sets" loading="lazy" onerror="__fb(this)"><span class="tile-info"><small>04 — Scent</small><h3>Fragrance</h3><span class="go">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+      <button class="tile rev" data-cat-link="Skin &amp; Sun" style="transition-delay:.06s"><img src="https://i.imgur.com/FQkbZHX.jpeg" alt="Serums and skincare" loading="lazy" onerror="__fb(this)"><span class="tile-info"><small>05 — Skin &amp; Sun</small><h3>Skin Rituals</h3><span class="go">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+      <button class="tile rev" data-cat-link="Body Care" style="transition-delay:.12s"><img src="https://i.imgur.com/ywDc7Cc.jpeg" alt="Body lotions and scrubs" loading="lazy" onerror="__fb(this)"><span class="tile-info"><small>06 — Body</small><h3>Body &amp; Hands</h3><span class="go">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEST SELLERS ============ -->
+<section class="section" id="bestsellers">
+  <div class="container">
+    <div class="rev">
+      <p class="eyebrow">The Edit</p>
+      <h2 class="h2">Best <em>sellers.</em></h2>
+      <p class="lead">Twelve pieces to begin with — lips, fragrance, complexion, skin and sun.</p>
+    </div>
+    <div class="best-grid" id="bestGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PROMO ============ -->
+<section class="section" id="promo">
+  <div class="container promo-grid">
+    <div class="promo-media rev"><img src="https://i.imgur.com/r53CI5C.jpeg" alt="Perfume, gloss and body lotion gift set" loading="lazy" onerror="__fb(this)"></div>
+    <div class="promo-copy rev" style="transition-delay:.1s">
+      <p class="eyebrow">Sets &amp; Multiples</p>
+      <h2 class="h2">Elegance, <em>by the dozen.</em></h2>
+      <p class="lead">Many GLOWEL favourites are available in 12-piece sets and multi-set options at special set pricing — ideal for gifting, salons and filling the vanity drawer. Every set price is shown on its product card.</p>
+      <button class="btn wa" id="bulkBtn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a11.6 11.6 0 0 1-7.985-3.105C2.67 15.963 2.02 13.65 2.02 11.305c0-5.467 4.45-9.91 9.918-9.91 2.652 0 5.144 1.033 7.014 2.904a9.85 9.85 0 0 1 2.903 7.012c0 5.468-4.45 9.912-9.917 9.912m8.46-18.373A11.83 11.83 0 0 0 11.937 0C5.353 0 .03 5.323.03 11.907c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.574 0 11.908-5.323 11.908-11.907 0-3.186-1.24-6.186-3.495-8.44"/></svg>
+        Ask About Set Pricing
+      </button>
+      <p class="promo-note">Browse the boutique below — single pieces and sets live side by side.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="section" id="shop">
+  <div class="container">
+    <div class="rev">
+      <p class="eyebrow">The Boutique</p>
+      <h2 class="h2">Shop the full <em>collection.</em></h2>
+      <p class="lead">Every catalogue piece, one listing each — search, filter, sort, and order in a tap.</p>
+    </div>
+    <div class="toolbar rev" style="transition-delay:.08s">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+        <input id="search" type="search" placeholder="Search products or categories…" aria-label="Search products by name or category" autocomplete="off">
+      </div>
+      <label class="sortwrap"><span>Sort</span>
+        <select id="sort" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="lo">Price · Low to high</option>
+          <option value="hi">Price · High to low</option>
+          <option value="az">Name · A to Z</option>
+        </select>
+      </label>
+    </div>
+    <div class="pills" id="pills" aria-label="Filter by category"></div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <h2 class="h2">Nothing found <em>yet.</em></h2>
+      <p class="lead">Try another search, or explore every category.</p>
+      <button class="btn solid" id="clearBtn">Clear Filters</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / CONTACT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="rev">
+      <img class="medal" src="https://i.imgur.com/Neocmhz.jpeg" alt="GLOWEL logo" loading="lazy" onerror="__fb(this)">
+      <p class="eyebrow">The House of Glowel</p>
+      <h2 class="h2">Beauty, <em>personally ordered.</em></h2>
+      <p class="lead">GLOWEL brings together an edited collection of beauty essentials — lip care, makeup, fragrance, skincare, sun care and body rituals — chosen piece by piece and priced simply. Fill your bag, and check out with a single WhatsApp message.</p>
+      <div class="contact-row">
+        <a class="btn wa" href="https://wa.me/96178792114?text=GLOWEL%20%E2%80%94%20Hello%2C%20I%20have%20a%20question%20about%20your%20collection." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a11.6 11.6 0 0 1-7.985-3.105C2.67 15.963 2.02 13.65 2.02 11.305c0-5.467 4.45-9.91 9.918-9.91 2.652 0 5.144 1.033 7.014 2.904a9.85 9.85 0 0 1 2.903 7.012c0 5.468-4.45 9.912-9.917 9.912m8.46-18.373A11.83 11.83 0 0 0 11.937 0C5.353 0 .03 5.323.03 11.907c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.574 0 11.908-5.323 11.908-11.907 0-3.186-1.24-6.186-3.495-8.44"/></svg>
+          Message GLOWEL
+        </a>
+        <span class="tel">WhatsApp · +961 78 792 114</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact">
+  <div class="container">
+    <div class="fgrid">
+      <div class="fbrand">
+        <img src="https://i.imgur.com/Neocmhz.jpeg" alt="GLOWEL logo" loading="lazy" onerror="__fb(this)">
+        <div>
+          <span>GLOWEL</span>
+          <p>A curated beauty boutique — lips, face, eyes, fragrance, skin, sun and body, ordered personally on WhatsApp.</p>
+        </div>
+      </div>
+      <div>
+        <p class="fh">Shop</p>
+        <div class="flinks">
+          <button data-cat-link="All">Shop All</button>
+          <button data-cat-link="Lip Care &amp; Lip Makeup">Lip Care &amp; Lip Makeup</button>
+          <button data-cat-link="Face Makeup">Face Makeup</button>
+          <button data-cat-link="Eye Makeup">Eye Makeup</button>
+          <button data-cat-link="Makeup Tools &amp; Accessories">Makeup Tools &amp; Accessories</button>
+          <button data-cat-link="Perfumes &amp; Fragrance">Perfumes &amp; Fragrance</button>
+          <button data-cat-link="Body Care">Body Care</button>
+          <button data-cat-link="Skin &amp; Sun">Skincare &amp; Sun Care</button>
+          <button data-cat-link="Personal Care">Personal Care</button>
+        </div>
+      </div>
+      <div>
+        <p class="fh">Order &amp; Contact</p>
+        <div class="flinks">
+          <a class="fwa" href="https://wa.me/96178792114" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a11.6 11.6 0 0 1-7.985-3.105C2.67 15.963 2.02 13.65 2.02 11.305c0-5.467 4.45-9.91 9.918-9.91 2.652 0 5.144 1.033 7.014 2.904a9.85 9.85 0 0 1 2.903 7.012c0 5.468-4.45 9.912-9.917 9.912m8.46-18.373A11.83 11.83 0 0 0 11.937 0C5.353 0 .03 5.323.03 11.907c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.574 0 11.908-5.323 11.908-11.907 0-3.186-1.24-6.186-3.495-8.44"/></svg>
+            Order via WhatsApp
+          </a>
+          <span class="fnum">+961 78 792 114</span>
+        </div>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© <span id="yr">2025</span> GLOWEL — All rights reserved.</span>
+      <span>Order anytime on WhatsApp</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART ============ -->
+<div class="scrim" id="scrim"></div>
+<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-label="Shopping bag">
+  <div class="cart-head">
+    <h3>Your Bag <span id="cartN"></span></h3>
+    <button class="iconbtn" id="cartClose" aria-label="Close bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+    <button class="btn wa" id="checkoutBtn">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a11.6 11.6 0 0 1-7.985-3.105C2.67 15.963 2.02 13.65 2.02 11.305c0-5.467 4.45-9.91 9.918-9.91 2.652 0 5.144 1.033 7.014 2.904a9.85 9.85 0 0 1 2.903 7.012c0 5.468-4.45 9.912-9.917 9.912m8.46-18.373A11.83 11.83 0 0 0 11.937 0C5.353 0 .03 5.323.03 11.907c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.574 0 11.908-5.323 11.908-11.907 0-3.186-1.24-6.186-3.495-8.44"/></svg>
+      Checkout via WhatsApp
+    </button>
+    <p class="cart-note">Product images are included in the WhatsApp message as clickable links — they are not attached files. You can edit the message before sending.</p>
+  </div>
+</aside>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Product image gallery">
+  <div class="lb-back" data-lb="close"></div>
+  <figure class="lb-stage">
+    <img id="lbImg" alt="" onerror="__fb(this)">
+    <figcaption id="lbCap"></figcaption>
+    <p id="lbCount"></p>
+  </figure>
+  <button class="lb-btn prev" data-lb="prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-btn next" data-lb="next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <button class="iconbtn lb-close" data-lb="close" aria-label="Close gallery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript><p style="text-align:center;padding:20px;font-family:sans-serif">GLOWEL needs JavaScript for the boutique experience — please enable it, or order directly on WhatsApp: +961 78 792 114.</p></noscript>
+
+<script>
+/* ================= CATALOGUE ================= */
+const LI="Lip Care & Lip Makeup",FA="Face Makeup",EY="Eye Makeup",TO="Makeup Tools & Accessories",PF="Perfumes & Fragrance",BC="Body Care",SK="Skincare & Facial Care",SU="Sun Care",PC="Personal Care";
+const P=[
+{id:1,n:"Lip Balm",c:LI,im:["AsP1Wx7","ae1sIR0"],o:[["1 pcs",1.5],["12 pcs",12]],v:["Strawberry","Peach"],f:1},
+{id:2,n:"Lip balm",c:LI,im:["zaijOLk"],o:[["1 pcs",1.5],["12 pcs",12]],v:["Strawberry"]},
+{id:3,n:"SADOER Lip Oil 3 in 1",c:LI,im:["1ov1wbp"],o:[["1 set",3],["12 set",28]],f:1},
+{id:4,n:"Set Lip Balm 3pcs",c:LI,im:["52zeg6X","BsCDLvB","NfkUv65"],o:[["1 set",4.75],["12 set",48]]},
+{id:5,n:"Pallete conselar plus conturing 6 colors",c:FA,im:["rimfaYB"],o:[["1 pcs",1.5],["12 pcs",12]]},
+{id:6,n:"Set Perfume 5pcs",c:PF,im:["H6cpKxW","eVtrWfq","XDq3knn"],o:[["1 set",3.5]]},
+{id:7,n:"VICTORIA’S SECRET 250ML",c:PF,im:["a6tKlaQ","M23nEJQ","7Mh6byh","COFrSwo","EXMa4cG","W35esy5","QX1agCS","S90b8vO","uetJarB","Pwia9JE","irghoeF","qstpR88","CunZFoh","x0oQmZ2","LroX6Fd","Ec5aXzh"],o:[["1 pcs",3],["12 pcs",24]],f:1},
+{id:8,n:"Victoria’s Secret pin 15ML",c:PF,im:["w8IeM4n"],o:[["1 pcs",1.25],["12 pcs",9]]},
+{id:9,n:"Roll On Yara",c:PF,im:["fUdPEYr"],o:[["1 pcs",1.25]]},
+{id:10,n:"Mini Perfume for man and women",c:PF,im:["3NZhodh"],o:[["1 pcs",1.25]]},
+{id:11,n:"Perfume gorgena",c:PF,im:["dArQtsE"],o:[["1 pcs",6]]},
+{id:12,n:"UNIQUE PERFUME",c:PF,im:["D9BIsZS"],o:[["1 pcs",2]]},
+{id:13,n:"Perfume with glitter",c:PF,im:["gkbc0pa"],o:[["1 pcs",2.25]]},
+{id:14,n:"LOTION YARA RED",c:BC,im:["ZdRRUDF","uKDteFt","5XCMGzK","JFOyyuF","jnfF5Ti"],o:[["1 pcs",2],["12 pcs",18]],f:1},
+{id:15,n:"Body splash Yara Red",c:PF,im:["0ZOfD2m"],o:[["1 pcs",2],["12 pcs",18]]},
+{id:16,n:"Cream musk al-tahara — Grogena",c:BC,im:["Uu5XFNh"],o:[["1 pcs",2]]},
+{id:17,n:"Glass perfume betres fruits",c:PF,im:["wvibBpu","CI6mnF2","51EheND","pmAIajl","69xVa4A","ksksBFz"],o:[["1 pcs",3.25],["12 pcs",21]]},
+{id:18,n:"BIOAQUA ROLL ON",c:PF,im:["85jcgrb","64c0VH5","xLwrZZu","7aTYUAX","8kBkw3T"],o:[["1 pcs",1.5],["12 pcs",9]]},
+{id:19,n:"FRAGRANCE SPRAY MIST",c:PF,im:["FfjfNEU","NdfpKRy"],o:[["1 set",3.5]]},
+{id:20,n:"Body Perfume",c:PF,im:["xCNO6Zs","xhoBf9Z","IPJFGlG","XdyVenI"],o:[["1 pcs",2.25]]},
+{id:21,n:"Perfume Sexy Girl — Hanna’s secret",c:PF,im:["Fe8hU2u"],o:[["1 pcs",2.25]]},
+{id:22,n:"Perfume fruit",c:PF,im:["MnviBu0"],o:[["1 pcs",2.5],["12 pcs",24]]},
+{id:23,n:"BODY MIST LOUNA GORGENA 250ML",c:PF,im:["RLmgfLn","7rHXiSm","h3W9uE5"],o:[["1 pcs",1.75]]},
+{id:24,n:"Delicioso fragrance mist",c:PF,im:["OiImpdd"],o:[["1 pcs",1.75]]},
+{id:25,n:"Lotion victoria secret",c:BC,im:["THdtD9Q"],o:[["1 pcs",3],["12 pcs",24]]},
+{id:26,n:"Perfume flower rococo",c:PF,im:["HgJIqiV","TWFh84E","tKclgJG"],o:[["1 pcs",2.5],["Stand",24]]},
+{id:27,n:"Pretty girls perfume 50ML",c:PF,im:["cTqtun9"],o:[["1 pcs",2.25]]},
+{id:28,n:"Set perfume + gloss +body lotion 4pcs",c:PF,im:["r53CI5C"],o:[["1 set",5],["3 set",12]],f:1},
+{id:29,n:"Set SIYIPING LIP BALM + PERFUME +LIP GLOSS",c:LI,im:["Bdb7YoA","cmF8v7r"],o:[["1 set",5],["3 set",12]]},
+{id:30,n:"Perfume candy",c:PF,im:["C2y6izk"],o:[["1 pcs",2.5],["12 pcs",21]]},
+{id:31,n:"Body cream",c:BC,im:["wZTpAZv"],o:[["1 pcs",1.25]]},
+{id:32,n:"Car air freshener spray",c:PF,im:["jqaqZvK","YyklJHX","TXW7etA","cstHmHP","dW7AP6y"],o:[["1 pcs",2.25]]},
+{id:33,n:"Victoria’s Secret Shower Gel 300ML",c:BC,im:["DWMhSoF","02OGSrZ","Fm9TQy7","Zfmbg5A","reF2GGS","4EWyN6R","UXl3Ete","kufiaHd","momOcsg"],o:[["1 pcs",3],["12 pcs",30]]},
+{id:34,n:"Perfume",c:PF,im:["kiCqpFM","ptLe9EG","hnB4nhl","OjG7tSk"],o:[["1 pcs",1.25],["12 pcs",10]]},
+{id:35,n:"Kazaziyan perfume and hand cream",c:BC,im:["LSKYmyu","upiY2Vl","sgPCaMe"],o:[["1 set",1.75],["12 set",15]]},
+{id:36,n:"Body mist",c:PF,im:["ckljVlr"],o:[["1 pcs",2],["12 pcs",21]]},
+{id:37,n:"Perfume 35ML",c:PF,im:["JB5b7ON","LxYVngc","8uaMycA","rFvs15O","gfH2Evz"],o:[["1 pcs",1.25],["12 pcs",10]]},
+{id:38,n:"Romantic perfume",c:PF,im:["Jb6CApB","6V2QTLA"],o:[["1 pcs",2.5],["12 pcs",26]],v:["Vanilla","Pink"]},
+{id:39,n:"Body splash plus body lotion — MAN",c:PF,im:["JMNqiM8"],o:[["1 pcs",3],["12 pcs",30]]},
+{id:40,n:"Body splash plus body lotion — Women",c:PF,im:["cksMWtG"],o:[["1 pcs",3],["12 pcs",30]]},
+{id:41,n:"Musk al-tahara splash",c:PF,im:["wU5ljE5"],o:[["1 pcs",2.5]]},
+{id:42,n:"Gel cleansing body scrub",c:BC,im:["S8GJwWU","URZXc7v","LXJXr7T","e7Xz4J9","d8pNiO3","haoza7l"],o:[["1 pcs",2.5],["12 pcs",24]],v:["Watermelon","Blueberry","Orange","Peach","Strawberry"]},
+{id:43,n:"Body lotion",c:BC,im:["ywDc7Cc"],o:[["1 pcs",3],["12 pcs",27]],v:["Coconut","Avocado","Strawberry","Mango","Peach","Grape"]},
+{id:44,n:"SADOER SCRUB BODY WASH",c:BC,im:["6kbKHAk"],o:[["1 pcs",2.5]]},
+{id:45,n:"Body lotion BIOAQUA",c:BC,im:["bUDhkmr"],o:[["1 pcs",1.5]]},
+{id:46,n:"Body scrub",c:BC,im:["9ElvfZx","oIXtKi8"],o:[["1 pcs",2],["12 pcs",15]],v:["Honey","Cucumber","Rice","Aloe vera","Orange","Rose","Gold","Strawberry"]},
+{id:47,n:"Hand cream",c:BC,im:["Uaxm1Qs"],o:[["1 pcs",2],["12 pcs",18]],v:["Avocado","Peach"]},
+{id:48,n:"Body lotion disaar",c:BC,im:["FjWj9vW"],o:[["1 pcs",3],["12 pcs",30]]},
+{id:49,n:"Hand cream peach",c:BC,im:["bCXo27h"],o:[["1 pcs",1.75],["12 pcs",15]]},
+{id:50,n:"Hand cream",c:BC,im:["UsWBc77","NOjLvuQ"],o:[["1 pcs",1.25],["24 pcs",15]]},
+{id:51,n:"Body scrub",c:BC,im:["NZTwEz7"],o:[["1 pcs",1.75],["12 pcs",15]]},
+{id:52,n:"Foot and nail care",c:PC,im:["61L1O9m"],o:[["1 pcs",4.5]]},
+{id:53,n:"Tl&G NOTE GEL BROW",c:EY,im:["CstYmdg"],o:[["1 pcs",1.5],["12 pcs",10]]},
+{id:54,n:"Conselar maybelline",c:FA,im:["bn8VvA3"],o:[["1 pcs",1.75],["12 pcs",15]]},
+{id:55,n:"Conselar tarte",c:FA,im:["Wxq3Mv4"],o:[["1 pcs",2.5],["12 pcs",20]],nt:"Available in 3 shades"},
+{id:56,n:"Setting spray make up",c:FA,im:["6wAwCEY"],o:[["1 pcs",3],["12 pcs",17]]},
+{id:57,n:"Foundation TVLV",c:FA,im:["vyeVtZA","49k60Fu","os2uVlm","PSy9Fn5","EslxQTE"],o:[["1 pcs",4.5],["12 pcs",36]],nt:"Available in 5 shades"},
+{id:58,n:"Conselar full coverage",c:FA,im:["vgF5lJ5"],o:[["1 pcs",1],["24 pcs",12]]},
+{id:59,n:"Setting spray with primer",c:FA,im:["FRponqa"],o:[["1 pcs",3],["12 pcs",17]]},
+{id:60,n:"Mascara emile",c:EY,im:["C5OGVAN"],o:[["1 pcs",2.75],["12 pcs",16]],nt:"Voulme lash"},
+{id:61,n:"Mascara emile",c:EY,im:["AACNPqE"],o:[["1 pcs",2.75],["12 pcs",16]]},
+{id:62,n:"Make up remover fit me",c:SK,im:["U6LIr0E"],o:[["1 pcs",2],["12 pcs",15]]},
+{id:63,n:"Conselar emile",c:FA,im:["Kjal8t8"],o:[["1 pcs",2.7],["12 pcs",16]],nt:"2 shades (1/2)"},
+{id:64,n:"Mascara curl emile",c:EY,im:["1hKogRd"],o:[["1 pcs",2.75],["12 pcs",16]]},
+{id:65,n:"Eyeliner stamp pen",c:EY,im:["uISjyB6"],o:[["1 pcs",2.25],["12 pcs",21]]},
+{id:66,n:"Eyeliner sky high",c:EY,im:["7BtPms5"],o:[["1 pcs",1],["12 pcs",6]]},
+{id:67,n:"Gloss rhode",c:LI,im:["ZA8It9P","IAuqMDI","szAkhtz","WrjAzeG"],o:[["1 pcs",2],["12 pcs",18]],f:1},
+{id:68,n:"Peel off lipliner",c:LI,im:["JT89VoC"],o:[["1 pcs",2],["12 pcs",20]]},
+{id:69,n:"Cherry lip gloss",c:LI,im:["9kDb2VF"],o:[["1 pcs",1],["24 pcs",15]]},
+{id:70,n:"Lip gloss Christmas",c:LI,im:["Rh7PxOj"],o:[["1 pcs",1],["24 pcs",15]]},
+{id:71,n:"Lip gloss",c:LI,im:["3BtuoSn"],o:[["1 pcs",1.25],["24 pcs",17]]},
+{id:72,n:"Lip gloss fruit",c:LI,im:["LTvR30e"],o:[["1 pcs",1],["24 pcs",15]]},
+{id:73,n:"Peel off lip-liner glossy lip tint",c:LI,im:["zhEWw77"],o:[["1 pcs",2.25],["12 pcs",23]]},
+{id:74,n:"Lip liner",c:LI,im:["mZFB62Y"],o:[["1 pcs",1],["12 pcs",9]]},
+{id:75,n:"Lipstick",c:LI,im:["hgerM4J"],o:[["1 pcs",1],["36 pcs",20]]},
+{id:76,n:"Cheek and lip",c:LI,im:["dSqfEjD"],o:[["1 pcs",1.5],["12 pcs",13]],v:["Strawberry"]},
+{id:77,n:"Huda beauty lip-liner",c:LI,im:["gErGmnG"],o:[["1 pcs",3],["12 pcs",28]]},
+{id:78,n:"Rhode lip liner",c:LI,im:["s3jfUqP"],o:[["1 pcs",3],["12 pcs",28]],nt:"Available in 11 shades"},
+{id:79,n:"Set lip gloss",c:LI,im:["Hfx14C3"],o:[["1 set",3],["24 pcs",20]]},
+{id:80,n:"Lip gloss and lip balm",c:LI,im:["2w3BveH"],o:[["1 cart",1.5],["12 cart",12]]},
+{id:81,n:"Lip gloss matte",c:LI,im:["x4qeR0Z"],o:[["1 pcs",1],["24 pcs",12]]},
+{id:82,n:"Lip tint +lip oil",c:LI,im:["bVO743E","7REWyzl"],o:[["1 pcs",1],["24 pcs",18]]},
+{id:83,n:"Lip gloss",c:LI,im:["3Ulpvu5"],o:[["1 pcs",1]]},
+{id:84,n:"Lip oil rhode",c:LI,im:["kag4EXZ"],o:[["1 pcs",1.25],["12 pcs",10]]},
+{id:85,n:"Lip gloss fresh lip balm",c:LI,im:["nVWagLz"],o:[["1 pcs",1.75],["12 pcs",15]]},
+{id:86,n:"Lip liner",c:LI,im:["YNozdxL"],o:[["1 pcs",0.35],["12 pcs",2.5]]},
+{id:87,n:"Lip gloss",c:LI,im:["eCrixf8"],o:[["1 pcs",1.25],["12 pcs",9]],v:["Avocado","Peach","Grape"]},
+{id:88,n:"Set 3pcs lip balm",c:LI,im:["cfSaSwC"],o:[["1 set",2.25],["6 set",9]]},
+{id:89,n:"Lipstick matte",c:LI,im:["3ZKGHqL"],o:[["1 pcs",1.75],["12 pcs",15]]},
+{id:90,n:"Lip gloss",c:LI,im:["S0A4PAn"],o:[["1 pcs",1.5],["12 pcs",12]]},
+{id:91,n:"Kiko gloss",c:LI,im:["sW2R9vp"],o:[["1 pcs",2.5],["12 pcs",18]],v:["01","02","03","04","05","06"],vl:"Shade"},
+{id:92,n:"Labello",c:LI,im:["erNygc3"],o:[["1 pcs",1.25],["12 pcs",10]]},
+{id:93,n:"Lip vaseline rosy tinted",c:LI,im:["LRgHYo4"],o:[["1 pcs",1.25],["12 pcs",9]]},
+{id:94,n:"Lip gloss",c:LI,im:["N4EqnYz"],o:[["1 pcs",1.25],["24 pcs",18]]},
+{id:95,n:"Gifts set 3pcs",c:LI,im:["URx1WwM"],o:[["1 set",3],["6 set",15]]},
+{id:96,n:"Lip balm 3pcs ushas",c:LI,im:["ewZVZIL"],o:[["1 set",2],["4 set",6]]},
+{id:97,n:"Lip mask",c:LI,im:["YSsVwJx"],o:[["1 pcs",0.9],["24 pcs",10]]},
+{id:98,n:"Lip plump &lip mask",c:LI,im:["Ep3wwMg"],o:[["1 pcs",2.5],["12 pcs",18]]},
+{id:99,n:"Lip gloss cherry",c:LI,im:["5egt8HV"],o:[["1 pcs",1],["24 pcs",16]]},
+{id:100,n:"Lipstick 4in1",c:LI,im:["BtsBFAB"],o:[["1 pcs",1.25],["12 pcs",10]]},
+{id:101,n:"Lip gloss rare beauty",c:LI,im:["0koIn8T"],o:[["1 pcs",2.5],["12 pcs",23]]},
+{id:102,n:"Summer Friday",c:LI,im:["MvKdCzu"],o:[["1 pcs",3.5],["12 pcs",33]],f:1},
+{id:103,n:"Vasalain teeth brightening colour corrector serum",c:PC,im:["bPmQpGw"],o:[["1 pcs",2.25],["12 pcs",18]]},
+{id:104,n:"Set disaar",c:SK,im:["bgFU1HN","EQZ1cmB"],o:[["1 pcs",10]],v:["Collagen","Vitamin c","Rose","Pomegranate"]},
+{id:105,n:"Cleanser blueberry SADOER",c:SK,im:["ThHYW8r"],o:[["1 pcs",2.5],["12 pcs",21]]},
+{id:106,n:"SADOER BLUEBERRY TONER",c:SK,im:["eYrpQHu"],o:[["1 pcs",3],["12 pcs",27]]},
+{id:107,n:"Serum blueberry Sadoer",c:SK,im:["cgQaiHB"],o:[["1 pcs",3],["12 pcs",27]]},
+{id:108,n:"Disaar facial wash",c:SK,im:["9FcAw99"],o:[["1 pcs",2.75],["12 pcs",24]],v:["Vitamin c","Watermelon","Strawberry","Orange","Kewi"]},
+{id:109,n:"Remover make up Miss vanesa",c:SK,im:["DAHpXD5"],o:[["1 pcs",2],["12 pcs",18]]},
+{id:110,n:"Disaar cream glow& moisture",c:SK,im:["gtMEUcn"],o:[["1 pcs",3],["12 pcs",21]]},
+{id:111,n:"Soap vitamin C DISAAR",c:PC,im:["n6a1FAS"],o:[["1 pcs",1.75],["12 pcs",15]]},
+{id:112,n:"Whitening mask grape",c:SK,im:["5cDGvn2"],o:[["1 pcs",3],["12 pcs",27]]},
+{id:113,n:"Pallete eyeshadow 18colors",c:EY,im:["9q179dm"],o:[["1 pcs",2],["12 pcs",15]]},
+{id:114,n:"Rhode blush",c:FA,im:["Y2VIDNG"],o:[["1 pcs",2.25],["12 pcs",20]],v:["Toasted teddy","Freckle","Spicy marg","Piggy","Juice box","Sleepy girl"],f:1},
+{id:115,n:"Lip gloss chocolate",c:LI,im:["KCC1VfL"],o:[["1 pcs",2.25],["12 pcs",21]]},
+{id:116,n:"Lip stick",c:LI,im:["yn5qs04"],o:[["1 pcs",1]]},
+{id:117,n:"Lip gloss magic",c:LI,im:["6AWYaJf"],o:[["1 set",2.5],["24 pcs",16]]},
+{id:118,n:"Ice cream lip gloss",c:LI,im:["JkcQrDf"],o:[["1 pcs",1.25],["16 pcs",10]]},
+{id:119,n:"Lip gloss stitch",c:LI,im:["9zBknFO"],o:[["1 pcs",0.8]]},
+{id:120,n:"Lip balm fruit",c:LI,im:["3DmyYjM"],o:[["1 pcs",1],["12 pcs",6]]},
+{id:121,n:"Lip balm",c:LI,im:["TQgDU7a"],o:[["1 pcs",0.75],["12 pcs",7]]},
+{id:122,n:"Lip gloss",c:LI,im:["h0JOgAr"],o:[["1 pcs",1],["12 pcs",5]]},
+{id:123,n:"Lip gloss qiuso",c:LI,im:["aLsRFi3","XGwBXkn","4zuZmJR"],o:[["1 pcs",2.75],["12 pcs",23]]},
+{id:124,n:"Baby cologne baby powder",c:PF,im:["Q77FvWX"],o:[["1 pcs",2],["12 pcs",18]],v:["Pink","Blue"]},
+{id:125,n:"Shea Butter",c:BC,im:["LfBhMdX","SsC1bDl"],o:[["1 pcs",2],["12 pcs",15]],v:["Yara","Lady model","Gorgena"]},
+{id:126,n:"Cleansing SADOER CHRISTMAS",c:SK,im:["GLVlBAT","PTbHrYk","QNDiUdE","dYbS3jC","8T7oOSR","jytt85t"],o:[["1 pcs",2],["12 pcs",15]],v:["Avocado","Orange vitamin c","Strawberry"]},
+{id:127,n:"345 RELIEF CREAM",c:SK,im:["r5w4bBZ"],o:[["1 pcs",5]]},
+{id:128,n:"Bikini butter for women",c:BC,im:["u3W1g5q"],o:[["1 pcs",3]]},
+{id:129,n:"SERUM LA-roche posay",c:SK,im:["FQkbZHX","sMz3Xko","zCdE9Wn"],o:[["1 pcs",5]],v:["C10","B5","B3"],f:1},
+{id:130,n:"Eye cream Love Jojo",c:SK,im:["8C1YMyT"],o:[["1 pcs",2],["12 pcs",15]]},
+{id:131,n:"Cream vitamin c Love jojo",c:SK,im:["WwGR50H"],o:[["1 pcs",2],["12 pcs",15]]},
+{id:132,n:"LA-ROCHE POSAY CLEANSING GEL",c:SK,im:["VFHQQMy"],o:[["1 pcs",5]]},
+{id:133,n:"LA-ROCHE POSAY 400ML",c:SK,im:["zQbqNj6"],o:[["1 pcs",5]],v:["Ap+ m","Aqua possey"]},
+{id:134,n:"LA-ROCHE POSAY MICELLAR WATER",c:SK,im:["1sBdmqF"],o:[["1 pcs",5]]},
+{id:135,n:"Body mist — Baby powder",c:PF,im:["TjBvGaw"],o:[["1 pcs",1.75]]},
+{id:136,n:"La Roche-Posay Effaclar Purifying Foaming Gel 400ml",c:SK,im:["4RqzVh2"],o:[["1 pcs",4],["12 pcs",21]]},
+{id:137,n:"La Roche-Posay Effaclar Micro-Peeling Gel 400ml",c:SK,im:["BIqcYLn"],o:[["1 pcs",5]]},
+{id:138,n:"SADOER COLLAGEN SAKURA CREAM",c:SK,im:["Vqs8I6w"],o:[["1 pcs",3],["12 pcs",21]]},
+{id:139,n:"La Roche-Posay Anthelios UVMune 400 Oil Control SPF 50+",c:SU,im:["QIpHxa8"],o:[["1 pcs",3.5]],f:1},
+{id:140,n:"La Roche-Posay Anthelios Ultra Tinted BB Cream SPF 50+",c:SU,im:["sCdQfj2"],o:[["1 pcs",3.5]]},
+{id:141,n:"La Roche-Posay Anthelios UVMune 400 SPF 50+",c:SU,im:["87CaKFF"],o:[["1 pcs",3.5]]},
+{id:142,n:"MASCARA SHEGLAM",c:EY,im:["05XFm2J","ucr9zu5"],o:[["1 pcs",3],["12 pcs",18]],v:["PURPLE","PINK"]},
+{id:143,n:"Sheglam Ultra Lock Setting Spray",c:FA,im:["WuBCqIU"],o:[["1 pcs",3],["12 pcs",21]]},
+{id:144,n:"SHEGLAM Complexion Pro",c:FA,im:["KPK5k71"],o:[["1 pcs",3]]},
+{id:145,n:"SHEGLAM LIP PLUMPER",c:LI,im:["F7MblUc"],o:[["1 pcs",2],["12 pcs",15]],v:["Strawberry fields","Berry spritz","Cherry gleam","Blush deizzle","Rose veil","Latte luxe","Honey glaze","Toffee kiss"],f:1},
+{id:146,n:"SHEGLAM LIQUID BLUSH",c:FA,im:["RE0IFsb"],o:[["1 pcs",2]],v:["LOVE CAKE","HUSH HUSH"]},
+{id:147,n:"Lip liner — Peel off",c:LI,im:["xqlrHzD"],o:[["1 pcs",3]],v:["1","2","3","4","5","6"],vl:"Shade"},
+{id:148,n:"MASCARA SHEGLAM WATERPROOF",c:EY,im:["BIALD3Q"],o:[["1 pcs",2.5]]},
+{id:149,n:"Lip Gloss — Strawberry milk",c:LI,im:["5o04I8o"],o:[["1 pcs",3]]},
+{id:150,n:"SHGELAM LIQUID TINT",c:LI,im:["asEIat7","yT5Y0hz","FkOiOXP"],o:[["1 pcs",1.25],["12 pcs",9]]},
+{id:151,n:"BRUSH MAKE UP 8pcs",c:TO,im:["e9XfUmu"],o:[["1 pcs",1.75],["12 pcs",12]]},
+{id:152,n:"MAKE UP BRUSH 7pcs",c:TO,im:["GEiCdgE"],o:[["1 pcs",1.75],["12 pcs",12]]},
+{id:153,n:"BLAWLESS BATTERY OPERATED EYEBROW TRIMMER",c:TO,im:["B8qlXu3"],o:[["1 pcs",3.5],["12 pcs",33]]},
+{id:154,n:"COSMATIC BAG",c:TO,im:["kLv7QQx","6fMEB4c"],o:[["1 pcs",3],["12 pcs",21]]},
+{id:155,n:"HAND paper soap",c:PC,im:["6ZCKqKq"],o:[["1 pcs",1],["24 pcs",11]]},
+{id:156,n:"HAIR MASSAGE",c:PC,im:["9bLIdbh"],o:[["1 pcs",1.5]]},
+{id:157,n:"LIP OIL TARTE",c:LI,im:["Td5LBfN","opVy3AR"],o:[["1 pcs",2.25]],v:["Cotton candy","Ice pop","Lemon","Grape","Kiwi","Blueberry","Jelly been","Sour candy"],f:1}
+];
+
+/* ================= HELPERS & STATE ================= */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const WA="https://wa.me/96178792114";
+const IU=id=>`https://i.imgur.com/${id}.jpeg`;
+const money=n=>"$"+n.toFixed(2);
+const ref=p=>"G-"+String(p.id).padStart(3,"0");
+const byId=id=>P.find(p=>p.id===id);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const escA=s=>esc(s).replace(/"/g,"&quot;");
+const GROUPS={"Makeup":["Face Makeup","Eye Makeup"],"Skin & Sun":["Skincare & Facial Care","Sun Care"]};
+const PILLS=["All","Makeup","Skin & Sun","Lip Care & Lip Makeup","Face Makeup","Eye Makeup","Makeup Tools & Accessories","Perfumes & Fragrance","Body Care","Skincare & Facial Care","Sun Care","Personal Care"];
+const WAICON='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a11.6 11.6 0 0 1-7.985-3.105C2.67 15.963 2.02 13.65 2.02 11.305c0-5.467 4.45-9.91 9.918-9.91 2.652 0 5.144 1.033 7.014 2.904a9.85 9.85 0 0 1 2.903 7.012c0 5.468-4.45 9.912-9.917 9.912m8.46-18.373A11.83 11.83 0 0 0 11.937 0C5.353 0 .03 5.323.03 11.907c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.574 0 11.908-5.323 11.908-11.907 0-3.186-1.24-6.186-3.495-8.44"/></svg>';
+
+let state={q:"",cat:"All",sort:"featured"};
+const gal={}; let uidc=0;
+let cart=new Map();
+
+/* ================= PRODUCT CARD ================= */
+function cardHTML(p,ctx,idx){
+  const uid="u"+(uidc++);
+  gal[uid]={i:0,o:0,v:0};
+  const multi=p.im.length>1, dots=p.im.length<=6;
+  const delay=idx!=null?` style="transition-delay:${Math.min(idx%12,11)*40}ms"`:"";
+  return `<article class="card rev"${delay} data-id="${p.id}" data-uid="${uid}">
+  <div class="card-media">
+    <button class="zoom" data-action="zoom" aria-label="View ${escA(p.n)} larger">
+      <img class="gimg" src="${IU(p.im[0])}" alt="${escA(p.n)}" loading="lazy" decoding="async" onerror="__fb(this)">
+    </button>
+    ${multi?`<button class="gnav prev" data-action="prev" aria-label="Previous image of ${escA(p.n)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="gnav next" data-action="next" aria-label="Next image of ${escA(p.n)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="gmeta">${dots?`<span class="gdots">${p.im.map((_,i)=>`<button class="gdot${i===0?" on":""}" data-action="dot" data-i="${i}" aria-label="Image ${i+1} of ${p.im.length}"></button>`).join("")}</span>`:""}<span class="gcount">1 / ${p.im.length}</span></div>`:""}
+  </div>
+  <div class="card-body">
+    <p class="card-cat">${esc(p.c)}</p>
+    <h3 class="card-name">${esc(p.n)}</h3>
+    ${p.nt?`<p class="card-note">${esc(p.nt)}</p>`:""}
+    ${p.v?`<div><span class="mlabel">${esc(p.vl||"Shade / Scent")}</span><div class="chips">${p.v.map((vv,i)=>`<button class="chip${i===0?" on":""}" data-action="var" data-i="${i}"${p.vl?` aria-label="${escA(p.vl)} ${escA(vv)}"`:""}>${esc(vv)}</button>`).join("")}</div></div>`:""}
+    ${p.o.length>1?`<div><span class="mlabel">Size</span><div class="packs">${p.o.map((oo,i)=>`<button class="pk${i===0?" on":""}" data-action="opt" data-i="${i}" aria-label="${escA(oo[0])} for ${money(oo[1])}">${esc(oo[0])} · ${money(oo[1])}</button>`).join("")}</div></div>`:""}
+    <div class="card-foot">
+      <p class="price"><strong class="pval">${money(p.o[0][1])}</strong><span class="pper">per ${esc(p.o[0][0])}</span></p>
+      <div class="cactions">
+        <button class="add" data-action="add">Add to Bag</button>
+        <button class="wab" data-action="wa" aria-label="Order ${escA(p.n)} via WhatsApp">${WAICON}</button>
+      </div>
+    </div>
+  </div>
+</article>`;
+}
+
+/* ================= SHOP RENDER ================= */
+function matchCat(p){
+  if(state.cat==="All")return true;
+  const g=GROUPS[state.cat];
+  return g?g.includes(p.c):p.c===state.cat;
+}
+function currentList(){
+  const q=state.q.trim().toLowerCase();
+  let list=P.map((p,i)=>({p,i})).filter(({p})=>{
+    const okQ=!q||p.n.toLowerCase().includes(q)||p.c.toLowerCase().includes(q);
+    return okQ&&matchCat(p);
+  });
+  if(state.sort==="lo")list.sort((a,b)=>a.p.o[0][1]-b.p.o[0][1]||a.i-b.i);
+  else if(state.sort==="hi")list.sort((a,b)=>b.p.o[0][1]-a.p.o[0][1]||a.i-b.i);
+  else if(state.sort==="az")list.sort((a,b)=>a.p.n.localeCompare(b.p.n)||a.i-b.i);
+  else list.sort((a,b)=>((b.p.f?1:0)-(a.p.f?1:0))||a.i-b.i);
+  return list.map(x=>x.p);
+}
+const gridEl=$("#grid"),countEl=$("#count"),emptyEl=$("#empty");
+function renderShop(){
+  const list=currentList();
+  countEl.textContent=`Showing ${list.length} of ${P.length} pieces`;
+  emptyEl.hidden=list.length>0;
+  gridEl.innerHTML=list.map((p,i)=>cardHTML(p,"shop",i)).join("");
+  obs();
+}
+function buildPills(){
+  $("#pills").innerHTML=PILLS.map(c=>`<button class="pill${state.cat===c?" on":""}" data-pill="${escA(c)}" aria-pressed="${state.cat===c}">${esc(c)}</button>`).join("");
+}
+function setCat(cat,scroll){
+  state.cat=cat;buildPills();renderShop();
+  if(scroll){$("#shop").scrollIntoView({behavior:"smooth"});}
+  closeMnav();
+}
+
+/* card interactions (event delegation) */
+gridEl.addEventListener("click",e=>{
+  const btn=e.target.closest("[data-action]");if(!btn)return;
+  const card=e.target.closest(".card");if(!card)return;
+  const p=byId(+card.dataset.id),st=gal[card.dataset.uid],act=btn.dataset.action;
+  if(act==="prev"){st.i=(st.i-1+p.im.length)%p.im.length;syncMedia(card,p,st);}
+  else if(act==="next"){st.i=(st.i+1)%p.im.length;syncMedia(card,p,st);}
+  else if(act==="dot"){st.i=+btn.dataset.i;syncMedia(card,p,st);}
+  else if(act==="opt"){st.o=+btn.dataset.i;syncOpts(card,p,st);}
+  else if(act==="var"){st.v=+btn.dataset.i;card.querySelectorAll(".chip").forEach((c,i)=>c.classList.toggle("on",i===st.v));}
+  else if(act==="zoom"){openLB(p,st.i);}
+  else if(act==="add"){addToCart(p,st.o,st.v,1);showToast("Added to your bag");}
+  else if(act==="wa"){orderSingle(p,st);}
+});
+function syncMedia(card,p,st){
+  const img=card.querySelector(".gimg"),url=IU(p.im[st.i]);
+  if(img.getAttribute("src")!==url){
+    img.style.opacity=".12";img.src=url;
+    const done=()=>{img.style.opacity="1";};
+    if(img.complete)done();else img.onload=done;
+  }
+  const c=card.querySelector(".gcount");if(c)c.textContent=(st.i+1)+" / "+p.im.length;
+  card.querySelectorAll(".gdot").forEach((d,i)=>d.classList.toggle("on",i===st.i));
+}
+function syncOpts(card,p,st){
+  card.querySelectorAll(".pk").forEach((b,i)=>b.classList.toggle("on",i===st.o));
+  card.querySelector(".pval").textContent=money(p.o[st.o][1]);
+  card.querySelector(".pper").textContent="per "+p.o[st.o][0];
+}
+
+/* ================= WHATSAPP ================= */
+function openWA(text){window.open(WA+"?text="+encodeURIComponent(text),"_blank","noopener");}
+function orderSingle(p,st){
+  const opt=p.o[st.o],unit=opt[1];
+  const L=["GLOWEL — ORDER","",`Product: ${p.n} (Ref ${ref(p)})`];
+  if(p.v&&p.v[st.v]!=null)L.push(`${p.vl||"Shade / Scent"}: ${p.v[st.v]}`);
+  L.push(`Pack: ${opt[0]}`,"Quantity: 1",`Unit price: ${money(unit)}`,`Total: ${money(unit)}`,"",
+  "Product image links (clickable — not attached files):",
+  ...p.im.map(x=>IU(x)));
+  openWA(L.join("\n"));
+}
+function buildCartMsg(){
+  const L=["GLOWEL — ORDER",""];let total=0,i=1;
+  cart.forEach(it=>{
+    const p=byId(it.id),opt=p.o[it.o],line=opt[1]*it.qty;total+=line;
+    L.push(`${i}. ${p.n} (Ref ${ref(p)})`);
+    if(it.v>=0&&p.v)L.push(`   ${p.vl||"Shade / Scent"}: ${p.v[it.v]}`);
+    L.push(`   Pack: ${opt[0]} | Quantity: ${it.qty}`,`   Unit price: ${money(opt[1])} | Line total: ${money(line)}`,
+    `   Image: ${IU(p.im[0])}`,"");
+    i++;
+  });
+  L.push(`GRAND TOTAL: ${money(total)}`,"",
+  "Note: product images are included as clickable links above — they are not attached files.");
+  return L.join("\n");
+}
+ $("#bulkBtn").addEventListener("click",()=>openWA("GLOWEL — Hello, I would like to ask about set and bulk pricing."));
+
+/* ================= CART ================= */
+const cartEl=$("#cart"),scrim=$("#scrim"),bagCount=$("#bagCount"),cartItems=$("#cartItems"),cartTotal=$("#cartTotal"),cartN=$("#cartN");
+const key=it=>it.id+":"+it.o+":"+it.v;
+function save(){try{localStorage.setItem("glowel_cart",JSON.stringify([...cart.values()]));}catch(e){}}
+function loadCart(){
+  try{
+    const a=JSON.parse(localStorage.getItem("glowel_cart")||"[]");
+    a.forEach(it=>{
+      const p=byId(it.id);if(!p||!(it.qty>0))return;
+      const o=Math.min(it.o||0,p.o.length-1);
+      const v=(it.v==null||!p.v)?-1:Math.min(it.v,p.v.length-1);
+      const rec={id:p.id,o,v,qty:Math.min(it.qty,99)};
+      cart.set(key(rec),rec);
+    });
+  }catch(e){}
+}
+function addToCart(p,o,v,qty){
+  const it={id:p.id,o,v,qty};
+  if(cart.has(key(it)))cart.get(key(it)).qty=Math.min(99,cart.get(key(it)).qty+qty);
+  else cart.set(key(it),it);
+  save();renderCart();
+  bagCount.classList.remove("pop");void bagCount.offsetWidth;bagCount.classList.add("pop");
+}
+function renderCart(){
+  const items=[...cart.values()];
+  const n=items.reduce((s,i)=>s+i.qty,0);
+  bagCount.textContent=n;bagCount.classList.toggle("show",n>0);
+  cartN.textContent=n?`(${n})`:"";
+  if(!items.length){
+    cartItems.innerHTML=`<div class="cart-empty"><p class="h3">Your bag is empty.</p><p class="lead">Your next favourite is waiting in the boutique.</p><button class="btn ghost" data-c="close">Continue Shopping</button></div>`;
+    cartTotal.textContent="$0.00";return;
+  }
+  let total=0,html="";
+  items.forEach(it=>{
+    const p=byId(it.id),opt=p.o[it.o],line=opt[1]*it.qty;total+=line;
+    html+=`<div class="ci" data-k="${escA(key(it))}">
+      <img src="${IU(p.im[0])}" alt="${escA(p.n)}" loading="lazy" onerror="__fb(this)">
+      <div class="ci-info">
+        <p class="ci-name">${esc(p.n)}</p>
+        <p class="ci-meta">${it.v>=0&&p.v?esc(p.v[it.v])+" · ":""}${esc(opt[0])}</p>
+        <div class="ci-qty">
+          <button data-c="dec" aria-label="Decrease quantity of ${escA(p.n)}">−</button>
+          <span>${it.qty}</span>
+          <button data-c="inc" aria-label="Increase quantity of ${escA(p.n)}">+</button>
+          <button class="ci-rm" data-c="rm" aria-label="Remove ${escA(p.n)} from bag">Remove</button>
+        </div>
+      </div>
+      <p class="ci-line">${money(line)}</p>
+    </div>`;
+  });
+  cartItems.innerHTML=html;
+  cartTotal.textContent=money(total);
+}
+cartItems.addEventListener("click",e=>{
+  const b=e.target.closest("[data-c]");if(!b)return;
+  if(b.dataset.c==="close"){closeCart();return;}
+  const row=e.target.closest(".ci"),k=row.dataset.k,it=cart.get(k);if(!it)return;
+  if(b.dataset.c==="inc")it.qty=Math.min(99,it.qty+1);
+  else if(b.dataset.c==="dec")it.qty=Math.max(1,it.qty-1);
+  else if(b.dataset.c==="rm"){cart.delete(k);showToast("Removed from your bag");}
+  save();renderCart();
+});
+ $("#checkoutBtn").addEventListener("click",()=>{
+  if(!cart.size){showToast("Your bag is empty");return;}
+  openWA(buildCartMsg());
+});
+function openCart(){cartEl.classList.add("open");scrim.classList.add("show");document.body.classList.add("lock");$("#cartClose").focus();}
+function closeCart(){cartEl.classList.remove("open");scrim.classList.remove("show");unlock();}
+ $("#bagBtn").addEventListener("click",openCart);
+ $("#cartClose").addEventListener("click",closeCart);
+scrim.addEventListener("click",closeCart);
+
+/* ================= LIGHTBOX ================= */
+const lb=$("#lb"),lbImg=$("#lbImg"),lbCap=$("#lbCap"),lbCount=$("#lbCount");
+let lbP=null,lbI=0;
+function openLB(p,i){lbP=p;lbI=i;lb.classList.add("open");document.body.classList.add("lock");syncLB();}
+function syncLB(){
+  if(!lbP)return;
+  lbImg.src=IU(lbP.im[lbI]);lbImg.alt=lbP.n+" — image "+(lbI+1);
+  lbCap.textContent=lbP.n+" — "+money(lbP.o[0][1]);
+  lbCount.textContent=(lbI+1)+" / "+lbP.im.length;
+}
+function lbNav(d){if(!lbP)return;lbI=(lbI+d+lbP.im.length)%lbP.im.length;syncLB();}
+function closeLB(){lb.classList.remove("open");lbP=null;unlock();}
+lb.addEventListener("click",e=>{
+  const b=e.target.closest("[data-lb]");if(!b)return;
+  const a=b.dataset.lb;
+  if(a==="close")closeLB();else if(a==="prev")lbNav(-1);else if(a==="next")lbNav(1);
+});
+document.addEventListener("keydown",e=>{
+  if(lb.classList.contains("open")){
+    if(e.key==="Escape")closeLB();
+    else if(e.key==="ArrowLeft")lbNav(-1);
+    else if(e.key==="ArrowRight")lbNav(1);
+  }else if(e.key==="Escape"){
+    if(cartEl.classList.contains("open"))closeCart();
+    if(mnav.classList.contains("open"))closeMnav();
+  }
+});
+
+/* ================= MOBILE NAV / MISC UI ================= */
+const mnav=$("#mnav"),burger=$("#burger");
+function openMnav(){mnav.classList.add("open");burger.setAttribute("aria-expanded","true");document.body.classList.add("lock");}
+function closeMnav(){mnav.classList.remove("open");burger.setAttribute("aria-expanded","false");unlock();}
+burger.addEventListener("click",openMnav);
+ $("#mnavClose").addEventListener("click",closeMnav);
+$$("#mnav [data-mlink]").forEach(el=>el.addEventListener("click",closeMnav));
+function unlock(){if(!cartEl.classList.contains("open")&&!mnav.classList.contains("open")&&!lb.classList.contains("open"))document.body.classList.remove("lock");}
+
+document.addEventListener("click",e=>{
+  const cl=e.target.closest("[data-cat-link]");
+  if(cl){e.preventDefault();setCat(cl.dataset.catLink,true);return;}
+  const pl=e.target.closest("[data-pill]");
+  if(pl){state.cat=pl.dataset.pill;buildPills();renderShop();return;}
+  const q=e.target.closest("[data-q]");
+  if(q){state.q=q.dataset.q;$("#search").value=state.q;state.cat="All";buildPills();renderShop();$("#shop").scrollIntoView({behavior:"smooth"});}
+});
+ $("#search").addEventListener("input",e=>{state.q=e.target.value;renderShop();});
+ $("#sort").addEventListener("change",e=>{state.sort=e.target.value;renderShop();});
+ $("#clearBtn").addEventListener("click",()=>{
+  state.q="";state.cat="All";$("#search").value="";buildPills();renderShop();showToast("Filters cleared");
+});
+ $("#searchBtn").addEventListener("click",()=>{
+  $("#shop").scrollIntoView({behavior:"smooth"});
+  setTimeout(()=>$("#search").focus({preventScroll:true}),500);
+});
+const hdr=$("#hdr");
+window.addEventListener("scroll",()=>hdr.classList.toggle("scrolled",window.scrollY>8),{passive:true});
+
+/* ================= TOAST ================= */
+const toast=$("#toast");let tT;
+function showToast(m){toast.textContent=m;toast.classList.add("show");clearTimeout(tT);tT=setTimeout(()=>toast.classList.remove("show"),2200);}
+
+/* ================= REVEAL ================= */
+const io=new IntersectionObserver(es=>es.forEach(en=>{
+  if(en.isIntersecting){en.target.classList.add("on");io.unobserve(en.target);
+    setTimeout(()=>{en.target.style.transitionDelay="0ms";},900);}
+}),{threshold:.1,rootMargin:"0px 0px -36px"});
+function obs(){$$(".rev:not(.on)").forEach(el=>io.observe(el));}
+
+/* ================= INIT ================= */
+ $("#cntHero").textContent=P.length;
+$$(".js-count").forEach(el=>el.textContent=P.length);
+ $("#yr").textContent=new Date().getFullYear();
+ $("#bestGrid").innerHTML=P.filter(p=>p.f).map((p,i)=>cardHTML(p,"best",i)).join("");
+loadCart();renderCart();buildPills();renderShop();obs();
+</script>
+</body>
+</html>
